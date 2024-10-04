@@ -3,22 +3,23 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: 'What is OpenAI o1?',
-    message: 'What is OpenAI o1?'
+    heading: 'Como cuidar do cabelo?',
+    message: 'Como cuidar do cabelo?'
   },
   {
-    heading: 'Why is Nvidia growing rapidly?',
-    message: 'Why is Nvidia growing rapidly?'
+    heading: 'Quais são as melhores séries?',
+    message: 'Quais são as melhores séries?'
   },
   {
-    heading: 'How does the Vercel AI SDK work?',
-    message: 'How does the Vercel AI SDK work?'
+    heading: 'Como melhorar minha autoestima?',
+    message: 'Como melhorar minha autoestima?'
   },
   {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
+    heading: 'Empreender do zero',
+    message: 'Empreender do zero'
   }
 ]
+
 export function EmptyScreen({
   submitMessage,
   className
