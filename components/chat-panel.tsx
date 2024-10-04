@@ -184,7 +184,7 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
           submitMessage={message => {
             setInput(message)
           }}
-          className={cn(showEmptyScreen ? 'visible' : 'invisible')}
+          // className={cn(showEmptyScreen ? 'visible' : 'invisible')}
         />
       </form>
     </div>
