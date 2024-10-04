@@ -117,6 +117,12 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
         'fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center'
       }
     >
+      <div className="mb-4 text-center">
+        <h1 className="text-4xl md:text-7xl font-sym">Sympho</h1>
+        <h3 className="text-base md:text-2xl mt-2">
+          Aqui, você busca e se encontra.
+        </h3>
+      </div>
       <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6">
         <div className="relative flex items-center w-full">
           <Textarea
