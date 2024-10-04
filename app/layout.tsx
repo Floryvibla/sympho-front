@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter as FontSans } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -14,7 +15,12 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const myFontSym = localFont({
+  src: '../public/fonts/Creolia.ttf',
+  variable: '--font-sym'
+})
+
+const title = 'Sympho'
 const description =
   'A fully open-source AI-powered answer engine with a generative UI.'
 
@@ -47,8 +53,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-sans antialiased', fontSans.variable)}>
+    <html lang="pt-br" suppressHydrationWarning>
+      <body
+        className={cn(
+          'font-sans antialiased',
+          fontSans.variable,
+          myFontSym.variable
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
