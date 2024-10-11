@@ -2,7 +2,7 @@ import { DeepPartial } from 'ai'
 import { z } from 'zod'
 
 export const inquirySchema = z.object({
-  question: z.string().describe('The inquiry question'),
+  question: z.string().describe('A questão do inquérito'),
   options: z
     .array(
       z.object({
@@ -10,13 +10,18 @@ export const inquirySchema = z.object({
         label: z.string()
       })
     )
-    .describe('The inquiry options'),
-  allowsInput: z.boolean().describe('Whether the inquiry allows for input'),
-  inputLabel: z.string().optional().describe('The label for the input field'),
+    .describe('As opções de consulta'),
+  allowsInput: z
+    .boolean()
+    .describe('Se o inquérito permite a entrada de dados'),
+  inputLabel: z
+    .string()
+    .optional()
+    .describe('O rótulo para o campo de entrada'),
   inputPlaceholder: z
     .string()
     .optional()
-    .describe('The placeholder for the input field')
+    .describe('O espaço reservado para o campo de entrada')
 })
 
 export type PartialInquiry = DeepPartial<typeof inquirySchema>

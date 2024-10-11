@@ -104,6 +104,11 @@ export const searchTool = ({ uiStream, fullResponse }: ToolProps) =>
         return searchResult
       }
 
+      console.log(
+        'JSON.stringify(searchResult): ',
+        JSON.stringify(searchResult)
+      )
+
       streamResults.done(JSON.stringify(searchResult))
       return searchResult
     }
